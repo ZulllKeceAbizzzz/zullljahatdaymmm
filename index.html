@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zul Ahyar Baharuddin | Portofolio</title>
+<meta name="description" content="Portofolio pribadi Zul Ahyar Baharuddin, mahasiswa Teknik Informatika Universitas Sulawesi Barat.">
+
+<!-- Tailwind CSS (CDN) -->
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<!-- CSS kustom -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#212529] text-slate-300 antialiased">
+
+<!-- NAVBAR -->
+<header class="fixed inset-x-0 top-0 z-50 border-b border-slate-600 bg-[#2b3035]">
+  <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3" aria-label="Navigasi utama">
+    <a href="#beranda" class="flex items-center gap-2 text-xl font-bold text-white">
+      <span class="rounded-md bg-blue-600 px-2.5 py-1 text-base">ZAB</span> Zul Ahyar Baharuddin
+    </a>
+    <button id="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Buka menu" class="rounded-lg border border-slate-500 px-3 py-2 text-slate-200 md:hidden">
+      <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+    <ul id="menu" class="absolute inset-x-0 top-full hidden flex-col gap-1 border-b border-slate-600 bg-[#2b3035] px-4 py-3 md:static md:flex md:flex-row md:gap-6 md:border-0 md:bg-transparent md:p-0">
+      <li><a class="block py-2 hover:text-white" href="#tentang">Tentang</a></li>
+      <li><a class="block py-2 hover:text-white" href="#pendidikan">Pendidikan</a></li>
+      <li><a class="block py-2 hover:text-white" href="#hobi">Hobi</a></li>
+      <li><a class="block py-2 hover:text-white" href="#kontak">Kontak</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<!-- HERO -->
+<section id="beranda" class="bg-[#031634] px-4 pb-16 pt-28">
+  <div class="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2">
+    <div class="relative mx-auto h-72 w-72 sm:h-80 sm:w-80 lg:order-2">
+      <div class="absolute inset-0 rounded-full border-2 border-blue-600"></div>
+      <img data-foto src="foto-saya.jpg" alt="Foto Zul Ahyar Baharuddin" class="absolute inset-3 h-[calc(100%-1.5rem)] w-[calc(100%-1.5rem)] rounded-full object-cover">
+      <span class="chip absolute -left-4 top-2 border-blue-600 bg-[#031634] text-white">🎓 Mahasiswa</span>
+      <span class="chip absolute -right-6 top-1/2 border-blue-600 bg-[#031634] text-white">🏸 Badminton</span>
+      <span class="chip absolute -left-4 bottom-4 border-blue-600 bg-[#031634] text-white">💡 Suka belajar</span>
+    </div>
+    <div class="lg:order-1">
+      <p class="inline-flex items-center gap-2 rounded-full border border-blue-700 bg-[#212529] px-4 py-2 text-slate-100">
+        <span class="h-3 w-3 rounded-full bg-green-600"></span> Mahasiswa aktif, pemain badminton dan catur
+      </p>
+      <h1 class="mt-6 text-4xl font-bold leading-tight text-slate-100 sm:text-5xl">Halo, saya Zull.<br>
+        <span id="ketik" class="text-blue-500"></span><span class="animate-pulse text-blue-500">|</span>
+      </h1>
+      <p class="mt-5 max-w-prose text-lg text-slate-400">Mahasiswa Teknik Informatika yang suka belajar hal baru, hobi badminton dan catur, dan pernah ikut lomba catur tingkat kabupaten. Halaman ini berisi cerita singkat tentang saya.</p>
+      <div class="mt-7 flex flex-col items-start gap-3">
+        <a href="#kontak" class="btn">Hubungi saya <span aria-hidden="true">→</span></a>
+        <a href="#tentang" class="btn-o">Kenali saya</a>
+      </div>
+      <div class="mt-7 flex gap-3" aria-label="Media sosial">
+        <!-- Ganti dengan tautan GitHub-mu, contoh: https://github.com/usernamemu -->
+        <a href="https://github.com/" aria-label="GitHub" class="flex h-11 w-11 items-center justify-center rounded-full border border-slate-500 text-sm font-bold hover:bg-white/10">GH</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DERETAN TAG -->
+<div class="flex flex-wrap justify-center gap-3 border-y border-slate-600 bg-[#2b3035] px-4 py-6">
+  <span class="chip">Teknik Informatika</span><span class="chip">Badminton</span>
+  <span class="chip">Catur</span><span class="chip">Mahasiswa</span><span class="chip">Selalu penasaran</span>
+</div>
+
+<!-- KARTU PROFIL -->
+<section class="px-4 py-16">
+  <div class="mx-auto max-w-md overflow-hidden rounded-xl border border-blue-800 bg-[#2b3035]">
+    <img data-foto src="foto-saya.jpg" alt="Foto Zul Ahyar Baharuddin" class="aspect-[3/4] w-full object-cover">
+    <div class="p-6">
+      <h2 class="text-2xl font-semibold text-white">Zul Ahyar Baharuddin</h2>
+      <p class="mt-1 text-lg text-slate-400">Mahasiswa Teknik Informatika</p>
+      <button id="btn-identitas" type="button" class="mt-5 w-full rounded-lg border border-blue-600 px-4 py-3 text-lg text-blue-400 transition hover:bg-blue-600 hover:text-white">🪪 Lihat kartu identitas</button>
+    </div>
+  </div>
+</section>
+
+<!-- TENTANG -->
+<section id="tentang" class="scroll-mt-16 px-4 pb-16">
+  <div class="mx-auto max-w-2xl">
+    <h2 class="text-3xl font-bold text-white">Sedikit tentang saya</h2>
+    <p class="mt-4 text-lg text-slate-400">Saya mahasiswa yang masih terus belajar menemukan arah. Belum banyak karya resmi yang bisa dipamerkan, jadi di sini saya memilih bercerita apa adanya: siapa saya, dari mana saya belajar, dan apa yang saya suka.</p>
+    <dl class="mt-8 space-y-4">
+      <div><dt class="font-semibold text-slate-400">Nama lengkap</dt><dd class="text-lg font-semibold text-white">Zul Ahyar Baharuddin</dd></div>
+      <div><dt class="font-semibold text-slate-400">Usia</dt><dd class="text-lg font-semibold text-white">20 tahun</dd></div>
+      <div><dt class="font-semibold text-slate-400">Status</dt><dd class="text-lg font-semibold text-white">Mahasiswa semester 3</dd></div>
+      <div><dt class="font-semibold text-slate-400">Email</dt><dd class="text-lg font-semibold text-white">menotmystyle@gmail.com</dd></div>
+      <div><dt class="font-semibold text-slate-400">Alamat</dt><dd class="text-lg font-semibold text-white">Pasangkayu, Sulawesi Barat</dd></div>
+    </dl>
+    <div class="mt-8 grid grid-cols-3 gap-4 text-center">
+      <div class="card"><p class="text-3xl font-bold text-white">20 th</p><p class="text-slate-400">Usia</p></div>
+      <div class="card"><p class="text-3xl font-bold text-white">3</p><p class="text-slate-400">Semester</p></div>
+      <div class="card"><p class="text-3xl font-bold text-white">2</p><p class="text-slate-400">Hobi</p></div>
+    </div>
+    <a href="#kontak" class="btn mt-8">Mulai ngobrol <span aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+<!-- RIWAYAT PENDIDIKAN (diisi oleh script.js) -->
+<section id="pendidikan" class="scroll-mt-16 bg-[#031634] px-4 py-16">
+  <div class="mx-auto max-w-2xl">
+    <h2 class="text-center text-3xl font-bold text-slate-100">Riwayat pendidikan</h2>
+    <p class="mt-3 text-center text-lg text-slate-400">Perjalanan belajar saya dari sekolah dasar sampai kuliah.</p>
+    <div id="timeline" class="relative mt-10"></div>
+  </div>
+</section>
+
+<!-- HOBI (diisi oleh script.js) -->
+<section id="hobi" class="scroll-mt-16 px-4 py-16">
+  <div class="mx-auto max-w-6xl">
+    <h2 class="text-3xl font-bold text-white">Hal yang saya suka</h2>
+    <p class="mt-2 text-lg text-slate-400">Dua hobi yang paling sering mengisi waktu luang saya.</p>
+    <div id="hobi-grid" class="mt-8 grid gap-5 md:grid-cols-2"></div>
+  </div>
+</section>
+
+<!-- BAGIAN BERWARNA MERAH: perjalanan hobi -->
+<section class="bg-[#2d0a10] px-4 py-16">
+  <div class="mx-auto max-w-2xl">
+    <h2 class="text-3xl font-bold text-white">Perjalanan hobi saya</h2>
+    <p class="mt-2 text-slate-400">Bagaimana hobi ikut tumbuh bersama saya.</p>
+    <div class="mt-6 space-y-5">
+      <div class="rounded-xl border-4 border-rose-600 bg-[#2d0a10] p-5">
+        <h3 class="font-bold text-white">Masa sekolah</h3>
+        <p class="mt-2 text-lg text-slate-400">Badminton dan catur sudah menemani saya sejak sekolah. Dari catur, saya pernah ikut lomba tingkat kabupaten, pengalaman yang menambah keberanian saya bertanding.</p>
+      </div>
+      <div class="rounded-xl border-4 border-rose-600 bg-[#2d0a10] p-5">
+        <h3 class="font-bold text-white">Masa kuliah</h3>
+        <p class="mt-2 text-lg text-slate-400">Di sela jadwal kuliah dan praktikum, saya tetap menyempatkan main badminton dan catur untuk melepas penat dan menjaga fokus.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KEPRIBADIAN (diisi oleh script.js) -->
+<section id="kepribadian" class="scroll-mt-16 px-4 py-16">
+  <div class="mx-auto max-w-6xl">
+    <h2 class="text-3xl font-bold text-white">Kepribadian saya sebagai mahasiswa</h2>
+    <p class="mt-2 text-lg text-slate-400">Sifat yang ingin terus saya bawa selama kuliah.</p>
+    <div id="sifat-grid" class="mt-8 grid gap-5 md:grid-cols-3"></div>
+  </div>
+</section>
+
+<!-- KONTAK -->
+<section id="kontak" class="scroll-mt-16 px-4 py-16">
+  <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-2">
+    <div>
+      <h2 class="text-3xl font-bold text-white">Mau kenalan atau ngobrol?</h2>
+      <p class="mt-3 text-lg text-slate-400">Kirim pesan singkat, saya biasanya membalas dalam satu hari. Boleh soal kuliah, kerja kelompok, atau sekadar ngobrol santai.</p>
+      <ul class="mt-6 space-y-4 text-lg">
+        <li class="flex gap-3"><span class="text-blue-500" aria-hidden="true">✉</span> menotmystyle@gmail.com</li>
+        <li class="flex gap-3"><span class="text-blue-500" aria-hidden="true">📍</span> Pasangkayu, Sulawesi Barat</li>
+        <li class="flex gap-3"><span class="text-blue-500" aria-hidden="true">🎓</span> Universitas Sulawesi Barat, Teknik Informatika</li>
+      </ul>
+    </div>
+    <form id="form" novalidate class="space-y-5 rounded-xl border border-blue-800 bg-[#212529] p-6">
+      <div>
+        <label for="nama" class="mb-1 block text-lg text-slate-200">Nama</label>
+        <input id="nama" class="inp" type="text" placeholder="Nama lengkap" autocomplete="name">
+        <p id="e-nama" class="mt-1 hidden text-sm text-red-400" role="alert"></p>
+      </div>
+      <div>
+        <label for="email" class="mb-1 block text-lg text-slate-200">Email</label>
+        <input id="email" class="inp" type="email" placeholder="nama@email.com" autocomplete="email">
+        <p id="e-email" class="mt-1 hidden text-sm text-red-400" role="alert"></p>
+      </div>
+      <div>
+        <div class="mb-1 flex justify-between text-lg text-slate-200"><label for="pesan">Pesan</label><span id="hitung" class="text-slate-400">0 / 300</span></div>
+        <textarea id="pesan" class="inp" rows="6" maxlength="300" placeholder="Tulis pesanmu di sini"></textarea>
+        <p id="e-pesan" class="mt-1 hidden text-sm text-red-400" role="alert"></p>
+      </div>
+      <button id="kirim" type="submit" class="w-full rounded-lg bg-blue-600 px-6 py-3 text-xl font-medium text-white transition hover:bg-blue-500 disabled:opacity-60">Kirim pesan</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="border-t border-slate-600 bg-[#2b3035] px-4 py-8 text-lg text-slate-300">
+  <div class="mx-auto max-w-6xl">
+    <p>© 2026 Zul Ahyar Baharuddin. Dibuat dengan Tailwind CSS.</p>
+    <a href="#beranda" class="mt-3 inline-block text-slate-400 hover:text-white">Kembali ke atas ↑</a>
+  </div>
+</footer>
+
+<a id="atas" href="#beranda" aria-label="Kembali ke atas" class="invisible fixed bottom-6 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-blue-600 text-2xl text-white shadow-lg hover:bg-blue-500">⌃</a>
+<div id="toast" role="status" class="fixed bottom-6 left-1/2 z-[70] hidden max-w-[calc(100%-2rem)] -translate-x-1/2 rounded-xl bg-white px-5 py-3 text-sm font-medium text-slate-900 shadow-2xl"></div>
+
+<!-- MODAL: satu dialog untuk semua popup -->
+<dialog id="modal" class="m-auto w-[calc(100%-1.5rem)] max-w-xl rounded-2xl bg-[#2b3035] p-0 text-slate-300 backdrop:bg-black/70">
+  <button id="tutup-modal" type="button" aria-label="Tutup popup" class="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-slate-700 text-white hover:bg-slate-600">✕</button>
+  <div id="modal-isi" class="p-6 pt-12"></div>
+</dialog>
+
+<!-- JavaScript -->
+<script src="script.js"></script>
+</body>
+</html>
